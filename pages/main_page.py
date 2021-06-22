@@ -10,6 +10,8 @@ LOCATOR_AJAX_DATA_LINK = (By.XPATH, '//a[@href="/ajax"]')
 LOCATOR_CLIENT_SIDE_DELAY_LINK = (By.XPATH, '//a[@href="/clientdelay"]')
 LOCATOR_CLICK_LINK = (By.XPATH, '//a[@href="/click"]')
 LOCATOR_TEXT_INPUT_LINK = (By.XPATH, '//a[@href="/textinput"]')
+LOCATOR_SCROLLBARS_LINK = (By.XPATH, '//a[@href="/scrollbars"]')
+LOCATOR_DYNAMIC_TABLE_LINK = (By.XPATH, '//a[@href="/dynamictable"]')
 
 
 class MainPage(BasePage):
@@ -45,3 +47,11 @@ class MainPage(BasePage):
     def text_input_link(self):
         text_input_link = self.find_element(LOCATOR_TEXT_INPUT_LINK)
         text_input_link.click()
+
+    def scrollbars_link(self):
+        scrollbars_link = self.find_element(LOCATOR_SCROLLBARS_LINK)
+        scrollbars_link.click()
+
+    def dynamic_table_link(self):
+        dynamic_table_link = self.find_element(LOCATOR_DYNAMIC_TABLE_LINK)
+        dynamic_table_link.click()

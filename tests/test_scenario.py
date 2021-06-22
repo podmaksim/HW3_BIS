@@ -7,6 +7,8 @@ from pages.ajax_data_page import AjaxDataPage
 from pages.client_side_delay_page import ClientSidePage
 from pages.click_page import ClickPage
 from pages.text_input_page import TextInputPage
+from pages.scrollbars_page import ScrollbarsPage
+from pages.dynamic_table_page import DynamicTablePage
 
 
 def test_dynamic_id(browser):
@@ -77,3 +79,20 @@ def test_text_input(browser):
     text_input_page.input_text()
     text_input_page.click_change_button()
     text_input_page.check_button()
+
+
+def test_scrollbars(browser):
+    main_page = MainPage(browser)
+    main_page.open_base_page()
+    main_page.scrollbars_link()
+    scrollbars_page = ScrollbarsPage(browser)
+    scrollbars_page.hiding_button()
+
+
+def test_dynamic_table(browser):
+    main_page = MainPage(browser)
+    main_page.open_base_page()
+    main_page.dynamic_table_link()
+    dynamic_table_page = DynamicTablePage(browser)
+    dynamic_table_page.check_cpu()
+
